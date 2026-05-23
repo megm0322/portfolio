@@ -69,25 +69,17 @@
   <!-- Portfolio -->
   <div style="margin-bottom:1.75rem">
     <div class="sec-label">Portfolio</div>
-
-    <!-- タブ -->
     <div class="tab-wrap">
-      <button class="tab-btn active" onclick="switchTab('all')">すべて</button>
-      <button class="tab-btn" onclick="switchTab('web')">Web</button>
-      <button class="tab-btn" onclick="switchTab('dtp')">DTP</button>
+      <button class="tab-btn active" onclick="switchTab(event,'all')">すべて</button>
+      <button class="tab-btn" onclick="switchTab(event,'web')">Web</button>
+      <button class="tab-btn" onclick="switchTab(event,'dtp')">DTP</button>
     </div>
-
-    <!-- すべて -->
     <div id="tab-all" class="tab-content active">
       <div class="works-grid" id="grid-all"></div>
     </div>
-
-    <!-- Web -->
     <div id="tab-web" class="tab-content">
       <div class="works-grid" id="grid-web"></div>
     </div>
-
-    <!-- DTP -->
     <div id="tab-dtp" class="tab-content">
       <div class="works-grid" id="grid-dtp"></div>
     </div>
@@ -105,10 +97,25 @@
 
 </div>
 
+<!-- モーダル -->
+<div id="modal-overlay" class="modal-overlay" onclick="closeModal()">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-thumb-wrap">
+      <img id="modal-thumb" src="" alt="" class="modal-thumb" style="display:none">
+      <div id="modal-thumb-placeholder" class="modal-thumb-placeholder">NO IMAGE</div>
+    </div>
+    <div class="modal-body">
+      <p id="modal-title" class="modal-title"></p>
+      <div class="modal-meta" id="modal-meta"></div>
+      <div id="modal-badges" class="work-badges" style="margin-top:12px"></div>
+      <p id="modal-desc" class="modal-desc"></p>
+      <a id="modal-url" href="" target="_blank" class="modal-url-btn" style="display:none">サイトを見る →</a>
+    </div>
+  </div>
+</div>
+
 <script>
-// =============================
-// 実績データ（ここを編集してね）
-// =============================
 const works = [
   {
     title: "【HP/TOPデザイン】お寺",
@@ -117,7 +124,8 @@ const works = [
     tools: "Adobe Photoshop",
     role: "Design",
     url: "",
-    thumb: ""
+    thumb: "",
+    desc: "クラウドソーシングのデザインコンペに応募し採用された案件。京都の日蓮系寺院の供養サイトとして、「蓮」のモチーフや和の装飾を効果的に取り入れ、宗教施設にふさわしい品格と親しみやすさを両立したデザインを実現。"
   },
   {
     title: "【HPデザイン】保育園",
@@ -126,7 +134,8 @@ const works = [
     tools: "Illustrator / Photoshop",
     role: "Design",
     url: "",
-    thumb: ""
+    thumb: "",
+    desc: ""
   },
   {
     title: "【HPデザイン】美容室-02",
@@ -135,7 +144,8 @@ const works = [
     tools: "Illustrator / Photoshop",
     role: "Design",
     url: "",
-    thumb: ""
+    thumb: "",
+    desc: ""
   },
   {
     title: "【HPデザイン】バレエ教室",
@@ -144,7 +154,8 @@ const works = [
     tools: "",
     role: "Design",
     url: "",
-    thumb: ""
+    thumb: "",
+    desc: ""
   },
   {
     title: "【HPデザイン】製造業",
@@ -153,7 +164,8 @@ const works = [
     tools: "",
     role: "Design / Coding",
     url: "",
-    thumb: ""
+    thumb: "",
+    desc: ""
   },
   {
     title: "【HPデザイン】美容室-01",
@@ -162,50 +174,20 @@ const works = [
     tools: "",
     role: "Design",
     url: "",
-    thumb: ""
+    thumb: "",
+    desc: ""
   }
-  // ↓ DTP実績も同じ形式で追加してな
-  // {
-  //   title: "チラシデザイン〇〇",
-  //   category: "dtp",
-  //   company: "恭誠社",
-  //   tools: "Illustrator / InDesign",
-  //   role: "Design / DTP",
-  //   url: "",
-  //   thumb: ""
-  // }
 ];
 
-// =============================
-// カード生成
-// =============================
-function createCard(work) {
+function createCard(work, idx) {
   const thumb = work.thumb
     ? `<img class="work-thumb" src="${work.thumb}" alt="${work.title}">`
     : `<div class="work-thumb-placeholder">NO IMAGE</div>`;
-
-  const url = work.url
-    ? `<div class="work-meta-row"><span class="work-meta-key">URL</span><span class="work-meta-val"><a href="${work.url}" target="_blank">${work.url}</a></span></div>`
-    : '';
-
-  const company = work.company
-    ? `<div class="work-meta-row"><span class="work-meta-key">会社</span><span class="work-meta-val">${work.company}</span></div>`
-    : '';
-
-  const tools = work.tools
-    ? `<div class="work-meta-row"><span class="work-meta-key">ツール</span><span class="work-meta-val">${work.tools}</span></div>`
-    : '';
-
   return `
-    <div class="work-card">
+    <div class="work-card" onclick="openModal(${idx})" style="cursor:pointer">
       ${thumb}
       <div class="work-info">
         <p class="work-title">${work.title}</p>
-        <div class="work-meta">
-          ${company}
-          ${tools}
-          ${url}
-        </div>
         <div class="work-badges">
           ${work.role.split('/').map(r => `<span class="badge">${r.trim()}</span>`).join('')}
         </div>
@@ -213,26 +195,67 @@ function createCard(work) {
     </div>`;
 }
 
-// グリッドに挿入
 function renderGrids() {
   const all = document.getElementById('grid-all');
   const web = document.getElementById('grid-web');
   const dtp = document.getElementById('grid-dtp');
-
-  works.forEach(w => {
-    all.insertAdjacentHTML('beforeend', createCard(w));
-    if (w.category === 'web') web.insertAdjacentHTML('beforeend', createCard(w));
-    if (w.category === 'dtp') dtp.insertAdjacentHTML('beforeend', createCard(w));
+  works.forEach((w, i) => {
+    all.insertAdjacentHTML('beforeend', createCard(w, i));
+    if (w.category === 'web') web.insertAdjacentHTML('beforeend', createCard(w, i));
+    if (w.category === 'dtp') dtp.insertAdjacentHTML('beforeend', createCard(w, i));
   });
 }
 
-// タブ切り替え
-function switchTab(name) {
-  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+function switchTab(e, name) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
   document.getElementById('tab-' + name).classList.add('active');
-  event.target.classList.add('active');
+  e.target.classList.add('active');
 }
+
+function openModal(idx) {
+  const w = works[idx];
+  document.getElementById('modal-title').textContent = w.title;
+
+  const thumb = document.getElementById('modal-thumb');
+  const placeholder = document.getElementById('modal-thumb-placeholder');
+  if (w.thumb) {
+    thumb.src = w.thumb;
+    thumb.style.display = 'block';
+    placeholder.style.display = 'none';
+  } else {
+    thumb.style.display = 'none';
+    placeholder.style.display = 'flex';
+  }
+
+  let meta = '';
+  if (w.company) meta += `<div class="modal-meta-row"><span class="modal-meta-key">会社</span><span>${w.company}</span></div>`;
+  if (w.tools)   meta += `<div class="modal-meta-row"><span class="modal-meta-key">ツール</span><span>${w.tools}</span></div>`;
+  document.getElementById('modal-meta').innerHTML = meta;
+
+  document.getElementById('modal-badges').innerHTML =
+    w.role.split('/').map(r => `<span class="badge">${r.trim()}</span>`).join('');
+
+  document.getElementById('modal-desc').textContent = w.desc || '';
+
+  const urlBtn = document.getElementById('modal-url');
+  if (w.url) {
+    urlBtn.href = w.url;
+    urlBtn.style.display = 'inline-block';
+  } else {
+    urlBtn.style.display = 'none';
+  }
+
+  document.getElementById('modal-overlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 renderGrids();
 </script>
