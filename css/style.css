@@ -113,3 +113,6 @@
 .notion-area ifrane{
     width:100%;
 }
+.notion-area ifrane header{
+    display:none!important;
+}
