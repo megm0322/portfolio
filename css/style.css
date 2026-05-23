@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+.pw {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    font-family: var(--font-sans)
+}
+.pname {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0 0 4px;
+    letter-spacing: 0.02em
+}
+.psub {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin: 0 0 1.75rem;
+    letter-spacing: 0.04em
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 2rem
+}
+.tag {
+    font-size: 12px;
+    padding: 4px 14px;
+    border-radius: var(--border-radius-md);
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    color: var(--color-text-secondary);
+    letter-spacing: 0.04em
+}
+.div {
+    border: none;
+    border-top: 0.5px solid var(--color-border-tertiary);
+    margin: 1.75rem 0
+}
+.sec-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: var(--color-text-tertiary);
+    text-transform: uppercase;
+    margin-bottom: 1rem
+}
+.sk-grid {
+    display: grid;
+    gap: 10px
+}
+.sk-row {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    line-height: 1.6
+}
+.sk-cat {
+    color: var(--color-text-tertiary);
+    min-width: 64px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    padding-top: 1px
+}
+.sk-val {
+    color: var(--color-text-primary);
+    letter-spacing: 0.02em
+}
+.ca-card {
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 1rem 1.25rem;
+    margin-bottom: 8px;
+    background: var(--color-background-primary)
+}
+.ca-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0 0 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.02em
+}
+.ca-body {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    margin: 0;
+    letter-spacing: 0.01em
+}
+.ct-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--color-text-info);
+    text-decoration: none;
+    letter-spacing: 0.04em
+}
+.notion-area {
+    border: 0.5px dashed var(--color-border-secondary);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    text-align: center;
+    color: var(--color-text-tertiary);
+    font-size: 13px;
+    margin-top: 8px;
+    letter-spacing: 0.04em
+}
