@@ -6,40 +6,33 @@
 	<title>Document</title>
 </head>
 <body>
-	
-<h2 class="sr-only">Megumi Yoshikawa のポートフォリオプロフィールページ</h2>
 
+
+<h2 class="sr-only">Megumi Matsumoto ポートフォリオ</h2>
 <style>
-.port-wrap { padding: 2rem 0; max-width: 640px; margin: 0 auto; }
-.port-intro { background: var(--color-background-secondary); border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); padding: 1.25rem; margin-bottom: 1.5rem; font-size: 14px; color: var(--color-text-secondary); line-height: 1.7; }
-.port-name { font-size: 22px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; }
-.port-sub { font-size: 14px; color: var(--color-text-secondary); margin: 0 0 1.5rem; }
-.port-section { margin-bottom: 1.5rem; }
-.port-label { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; color: var(--color-text-tertiary); text-transform: uppercase; margin-bottom: 10px; }
-.skill-grid { display: grid; gap: 8px; }
-.skill-row { display: flex; align-items: baseline; gap: 12px; font-size: 13px; }
-.skill-cat { color: var(--color-text-tertiary); min-width: 56px; font-size: 12px; }
-.skill-val { color: var(--color-text-primary); }
-.tag-wrap { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.5rem; }
-.tag { font-size: 12px; padding: 4px 12px; border-radius: var(--border-radius-md); background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); }
-.career-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 8px; }
-.career-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; display: flex; align-items: center; gap: 8px; }
-.career-body { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; margin: 0; }
-.contact-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--color-text-info); text-decoration: none; padding: 8px 0; }
-.divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 1.5rem 0; }
+.pw{max-width:680px;margin:0 auto;padding:3rem 2rem;font-family:var(--font-sans)}
+.pname{font-size:22px;font-weight:500;color:var(--color-text-primary);margin:0 0 4px;letter-spacing:0.02em}
+.psub{font-size:14px;color:var(--color-text-secondary);margin:0 0 1.75rem;letter-spacing:0.04em}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:2rem}
+.tag{font-size:12px;padding:4px 14px;border-radius:var(--border-radius-md);background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);color:var(--color-text-secondary);letter-spacing:0.04em}
+.div{border:none;border-top:0.5px solid var(--color-border-tertiary);margin:1.75rem 0}
+.sec-label{font-size:11px;font-weight:500;letter-spacing:0.18em;color:var(--color-text-tertiary);text-transform:uppercase;margin-bottom:1rem}
+.sk-grid{display:grid;gap:10px}
+.sk-row{display:flex;gap:20px;font-size:13px;line-height:1.6}
+.sk-cat{color:var(--color-text-tertiary);min-width:64px;font-size:12px;letter-spacing:0.06em;padding-top:1px}
+.sk-val{color:var(--color-text-primary);letter-spacing:0.02em}
+.ca-card{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.25rem;margin-bottom:8px;background:var(--color-background-primary)}
+.ca-title{font-size:13px;font-weight:500;color:var(--color-text-primary);margin:0 0 5px;display:flex;align-items:center;gap:8px;letter-spacing:0.02em}
+.ca-body{font-size:13px;color:var(--color-text-secondary);line-height:1.75;margin:0;letter-spacing:0.01em}
+.ct-link{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--color-text-info);text-decoration:none;letter-spacing:0.04em}
+.notion-area{border:0.5px dashed var(--color-border-secondary);border-radius:var(--border-radius-lg);padding:2rem;text-align:center;color:var(--color-text-tertiary);font-size:13px;margin-top:8px;letter-spacing:0.04em}
 </style>
 
-<div class="port-wrap">
+<div class="pw">
+  <p class="pname">Megumi Matsumoto</p>
+  <p class="psub">松本 恵美 &nbsp;—&nbsp; Web Designer / DTP Designer</p>
 
-  <div class="port-intro">
-    <i class="ti ti-hand-stop" aria-hidden="true" style="margin-right:6px"></i>
-    ご覧いただきありがとうございます。Web / DTPを中心に、デザイン〜コーディングまで対応しています。
-  </div>
-
-  <p class="port-name">Megumi Matsumoto</p>
-  <p class="port-sub">松本 恵美 — Web Designer / DTP Designer</p>
-
-  <div class="tag-wrap">
+  <div class="tags">
     <span class="tag">Web Design</span>
     <span class="tag">DTP</span>
     <span class="tag">Coding</span>
@@ -47,70 +40,76 @@
     <span class="tag">Video</span>
   </div>
 
-  <hr class="divider">
+  <hr class="div">
 
-  <div class="port-section">
-    <div class="port-label">Skills</div>
-    <div class="skill-grid">
-      <div class="skill-row">
-        <span class="skill-cat">Design</span>
-        <span class="skill-val">Illustrator / Photoshop / InDesign / XD</span>
+  <div style="margin-bottom:1.75rem">
+    <div class="sec-label">Skills</div>
+    <div class="sk-grid">
+      <div class="sk-row">
+        <span class="sk-cat">Design</span>
+        <span class="sk-val">Illustrator &nbsp;/&nbsp; Photoshop &nbsp;/&nbsp; InDesign &nbsp;/&nbsp; XD</span>
       </div>
-      <div class="skill-row">
-        <span class="skill-cat">Coding</span>
-        <span class="skill-val">HTML / CSS / WordPress</span>
+      <div class="sk-row">
+        <span class="sk-cat">Coding</span>
+        <span class="sk-val">HTML &nbsp;/&nbsp; CSS &nbsp;/&nbsp; WordPress</span>
       </div>
-      <div class="skill-row">
-        <span class="skill-cat">Motion</span>
-        <span class="skill-val">Premiere Pro / After Effects</span>
+      <div class="sk-row">
+        <span class="sk-cat">Motion</span>
+        <span class="sk-val">Premiere Pro &nbsp;/&nbsp; After Effects</span>
       </div>
-      <div class="skill-row">
-        <span class="skill-cat">Other</span>
-        <span class="skill-val">VS Code</span>
+      <div class="sk-row">
+        <span class="sk-cat">Other</span>
+        <span class="sk-val">VS Code</span>
       </div>
     </div>
   </div>
 
-  <hr class="divider">
+  <hr class="div">
 
-  <div class="port-section">
-    <div class="port-label">Career</div>
-
-    <div class="career-card">
-      <p class="career-title">
-        <i class="ti ti-building" aria-hidden="true" style="font-size:16px; color:var(--color-text-tertiary)"></i>
-        直近 — 卸売企業（インハウス）
+  <div style="margin-bottom:1.75rem">
+    <div class="sec-label">Career</div>
+    <div class="ca-card">
+      <p class="ca-title">
+        <i class="ti ti-building" aria-hidden="true" style="font-size:15px;color:var(--color-text-tertiary)"></i>
+        直近 &nbsp;—&nbsp; 卸売企業（インハウス）
       </p>
-      <p class="career-body">販促物（チラシ・カタログ等）制作に加え、Webサイトのデザイン〜構築・動画制作まで横断して担当。課長として進行管理・チームマネジメントも担う。</p>
+      <p class="ca-body">販促物（チラシ・カタログ等）制作に加え、Webサイトのデザイン〜構築・動画制作まで横断して担当。課長として進行管理・チームマネジメントも担う。</p>
     </div>
-
-    <div class="career-card">
-      <p class="career-title">
-        <i class="ti ti-code" aria-hidden="true" style="font-size:16px; color:var(--color-text-tertiary)"></i>
+    <div class="ca-card">
+      <p class="ca-title">
+        <i class="ti ti-code" aria-hidden="true" style="font-size:15px;color:var(--color-text-tertiary)"></i>
         Web制作会社 / 事業会社
       </p>
-      <p class="career-body">Webデザイン・レスポンシブコーディング・CMS組み込みを経験。ディレクターとの連携や進行管理も担当。</p>
+      <p class="ca-body">Webデザイン・レスポンシブコーディング・CMS組み込みを経験。ディレクターとの連携や進行管理も担当。</p>
     </div>
-
-    <div class="career-card">
-      <p class="career-title">
-        <i class="ti ti-file-text" aria-hidden="true" style="font-size:16px; color:var(--color-text-tertiary)"></i>
+    <div class="ca-card">
+      <p class="ca-title">
+        <i class="ti ti-file-text" aria-hidden="true" style="font-size:15px;color:var(--color-text-tertiary)"></i>
         DTP制作
       </p>
-      <p class="career-body">求人広告・販促物等のDTP制作。紙 / Web / 動画を一貫した視点で設計・制作できます。</p>
+      <p class="ca-body">求人広告・販促物等のDTP制作。紙 / Web / 動画を一貫した視点で設計・制作できます。</p>
     </div>
   </div>
 
-  <hr class="divider">
+  <hr class="div">
 
-  <div class="port-section">
-    <div class="port-label">Contact</div>
-    <a class="contact-link" href="mailto:matsu.book0322@gmail.com">
+  <div style="margin-bottom:1.75rem">
+    <div class="sec-label">Portfolio</div>
+    <div class="notion-area">
+      <i class="ti ti-layout-grid" aria-hidden="true" style="font-size:20px;display:block;margin-bottom:8px"></i>
+      ここにNotionの実績を埋め込み
+    </div>
+  </div>
+
+  <hr class="div">
+
+  <div>
+    <div class="sec-label">Contact</div>
+    <a class="ct-link" href="mailto:matsu.book0322@gmail.com">
       <i class="ti ti-mail" aria-hidden="true" style="font-size:16px"></i>
       matsu.book0322@gmail.com
     </a>
   </div>
-
 </div>
 
 </body>
