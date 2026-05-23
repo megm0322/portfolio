@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f0f0f;
+    --surface: #181818;
+    --accent: #c8a96e;
+    --accent2: #8bb4a0;
+    --text: #e8e4de;
+    --muted: #6b6560;
+    --border: #2a2a2a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 640px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 56px 52px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent), var(--accent2));
+  }
+
+  .card::after {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 240px; height: 240px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,169,110,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .header {
+    margin-bottom: 48px;
+  }
+
+  .label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    color: var(--text);
+  }
+
+  .name span {
+    display: block;
+    font-size: 14px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    color: var(--muted);
+    letter-spacing: 0.2em;
+    margin-top: 6px;
+  }
+
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    margin: 24px 0;
+    opacity: 0.6;
+  }
+
+  .expertise {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 48px;
+  }
+
+  .tag {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    padding: 5px 14px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .section {
+    margin-bottom: 36px;
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--accent2);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .skill-group {
+    display: grid;
+    gap: 12px;
+  }
+
+  .skill-row {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .skill-category {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    min-width: 60px;
+    text-transform: uppercase;
+  }
+
+  .skill-items {
+    font-size: 13px;
+    color: var(--text);
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+  }
+
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+    margin-top: 4px;
+  }
+
+  .contact-link:hover {
+    color: var(--accent);
+  }
+
+  .contact-link::before {
+    content: '→';
+    font-size: 10px;
+    color: var(--accent);
+  }
+
+  .footer-line {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    opacity: 0.3;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="header">
+    <div class="label">Portfolio</div>
+    <div class="name">
+      Megumi Matsumoto
+      <span>松本 恵美 — Designer</span>
+    </div>
+    <div class="divider"></div>
+    <div class="expertise">
+      <div class="tag">Web Design</div>
+      <div class="tag">DTP</div>
+      <div class="tag">Coding</div>
+      <div class="tag">Creative Direction</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Skills</div>
+    <div class="skill-group">
+      <div class="skill-row">
+        <div class="skill-category">Design</div>
+        <div class="skill-items">Illustrator &nbsp;/&nbsp; Photoshop &nbsp;/&nbsp; InDesign &nbsp;/&nbsp; XD</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-category">Coding</div>
+        <div class="skill-items">HTML &nbsp;/&nbsp; CSS</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-category">Motion</div>
+        <div class="skill-items">Premiere Pro &nbsp;/&nbsp; After Effects</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Contact</div>
+    <a class="contact-link" href="mailto:matsu.book0322@gmail.com">
+      matsu.book0322@gmail.com
+    </a>
+  </div>
+
+  <div class="footer-line"></div>
+</div>
+</body>
+</html>
