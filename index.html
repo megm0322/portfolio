@@ -1,246 +1,117 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #0f0f0f;
-    --surface: #181818;
-    --accent: #c8a96e;
-    --accent2: #8bb4a0;
-    --text: #e8e4de;
-    --muted: #6b6560;
-    --border: #2a2a2a;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 300;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 640px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 56px 52px;
-    position: relative;
-    overflow: hidden;
-    animation: fadeIn 0.8s ease forwards;
-  }
-
-  .card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(180deg, var(--accent), var(--accent2));
-  }
-
-  .card::after {
-    content: '';
-    position: absolute;
-    top: -80px; right: -80px;
-    width: 240px; height: 240px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(200,169,110,0.06) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(16px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .header {
-    margin-bottom: 48px;
-  }
-
-  .label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-bottom: 12px;
-  }
-
-  .name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 42px;
-    font-weight: 300;
-    letter-spacing: 0.05em;
-    line-height: 1.1;
-    color: var(--text);
-  }
-
-  .name span {
-    display: block;
-    font-size: 14px;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 300;
-    color: var(--muted);
-    letter-spacing: 0.2em;
-    margin-top: 6px;
-  }
-
-  .divider {
-    width: 40px;
-    height: 1px;
-    background: var(--accent);
-    margin: 24px 0;
-    opacity: 0.6;
-  }
-
-  .expertise {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 48px;
-  }
-
-  .tag {
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    padding: 5px 14px;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    transition: all 0.3s ease;
-    cursor: default;
-  }
-
-  .tag:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-  }
-
-  .section {
-    margin-bottom: 36px;
-    animation: fadeIn 0.8s ease forwards;
-  }
-
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    color: var(--accent2);
-    text-transform: uppercase;
-    margin-bottom: 16px;
-  }
-
-  .skill-group {
-    display: grid;
-    gap: 12px;
-  }
-
-  .skill-row {
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-  }
-
-  .skill-category {
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    color: var(--muted);
-    min-width: 60px;
-    text-transform: uppercase;
-  }
-
-  .skill-items {
-    font-size: 13px;
-    color: var(--text);
-    letter-spacing: 0.05em;
-    line-height: 1.6;
-  }
-
-  .contact-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    transition: color 0.3s ease;
-    margin-top: 4px;
-  }
-
-  .contact-link:hover {
-    color: var(--accent);
-  }
-
-  .contact-link::before {
-    content: '→';
-    font-size: 10px;
-    color: var(--accent);
-  }
-
-  .footer-line {
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, var(--accent), transparent);
-    opacity: 0.3;
-  }
-</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 </head>
 <body>
-<div class="card">
-  <div class="header">
-    <div class="label">Portfolio</div>
-    <div class="name">
-      Megumi Matsumoto
-      <span>松本 恵美 — Designer</span>
-    </div>
-    <div class="divider"></div>
-    <div class="expertise">
-      <div class="tag">Web Design</div>
-      <div class="tag">DTP</div>
-      <div class="tag">Coding</div>
-      <div class="tag">Creative Direction</div>
+	
+<h2 class="sr-only">Megumi Matsumoto のポートフォリオプロフィールページ</h2>
+
+<style>
+.port-wrap { padding: 2rem 0; max-width: 640px; margin: 0 auto; }
+.port-intro { background: var(--color-background-secondary); border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); padding: 1.25rem; margin-bottom: 1.5rem; font-size: 14px; color: var(--color-text-secondary); line-height: 1.7; }
+.port-name { font-size: 22px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; }
+.port-sub { font-size: 14px; color: var(--color-text-secondary); margin: 0 0 1.5rem; }
+.port-section { margin-bottom: 1.5rem; }
+.port-label { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; color: var(--color-text-tertiary); text-transform: uppercase; margin-bottom: 10px; }
+.skill-grid { display: grid; gap: 8px; }
+.skill-row { display: flex; align-items: baseline; gap: 12px; font-size: 13px; }
+.skill-cat { color: var(--color-text-tertiary); min-width: 56px; font-size: 12px; }
+.skill-val { color: var(--color-text-primary); }
+.tag-wrap { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.5rem; }
+.tag { font-size: 12px; padding: 4px 12px; border-radius: var(--border-radius-md); background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); }
+.career-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 8px; }
+.career-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; display: flex; align-items: center; gap: 8px; }
+.career-body { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; margin: 0; }
+.contact-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--color-text-info); text-decoration: none; padding: 8px 0; }
+.divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 1.5rem 0; }
+</style>
+
+<div class="port-wrap">
+
+  <div class="port-intro">
+    <i class="ti ti-hand-stop" aria-hidden="true" style="margin-right:6px"></i>
+    ご覧いただきありがとうございます。Web / DTPを中心に、デザイン〜コーディングまで対応しています。
+  </div>
+
+  <p class="port-name">Megumi Matsumoto</p>
+  <p class="port-sub">松本 恵美 — Web Designer / DTP Designer</p>
+
+  <div class="tag-wrap">
+    <span class="tag">Web Design</span>
+    <span class="tag">DTP</span>
+    <span class="tag">Coding</span>
+    <span class="tag">Creative Direction</span>
+    <span class="tag">Video</span>
+  </div>
+
+  <hr class="divider">
+
+  <div class="port-section">
+    <div class="port-label">Skills</div>
+    <div class="skill-grid">
+      <div class="skill-row">
+        <span class="skill-cat">Design</span>
+        <span class="skill-val">Illustrator / Photoshop / InDesign / XD</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-cat">Coding</span>
+        <span class="skill-val">HTML / CSS / WordPress</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-cat">Motion</span>
+        <span class="skill-val">Premiere Pro / After Effects</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-cat">Other</span>
+        <span class="skill-val">VS Code</span>
+      </div>
     </div>
   </div>
 
-  <div class="section">
-    <div class="section-title">Skills</div>
-    <div class="skill-group">
-      <div class="skill-row">
-        <div class="skill-category">Design</div>
-        <div class="skill-items">Illustrator &nbsp;/&nbsp; Photoshop &nbsp;/&nbsp; InDesign &nbsp;/&nbsp; XD</div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-category">Coding</div>
-        <div class="skill-items">HTML &nbsp;/&nbsp; CSS</div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-category">Motion</div>
-        <div class="skill-items">Premiere Pro &nbsp;/&nbsp; After Effects</div>
-      </div>
+  <hr class="divider">
+
+  <div class="port-section">
+    <div class="port-label">Career</div>
+
+    <div class="career-card">
+      <p class="career-title">
+        <i class="ti ti-building" aria-hidden="true" style="font-size:16px; color:var(--color-text-tertiary)"></i>
+        直近 — 卸売企業（インハウス）
+      </p>
+      <p class="career-body">販促物（チラシ・カタログ等）制作に加え、Webサイトのデザイン〜構築・動画制作まで横断して担当。課長として進行管理・チームマネジメントも担う。</p>
+    </div>
+
+    <div class="career-card">
+      <p class="career-title">
+        <i class="ti ti-code" aria-hidden="true" style="font-size:16px; color:var(--color-text-tertiary)"></i>
+        Web制作会社 / 事業会社
+      </p>
+      <p class="career-body">Webデザイン・レスポンシブコーディング・CMS組み込みを経験。ディレクターとの連携や進行管理も担当。</p>
+    </div>
+
+    <div class="career-card">
+      <p class="career-title">
+        <i class="ti ti-file-text" aria-hidden="true" style="font-size:16px; color:var(--color-text-tertiary)"></i>
+        DTP制作
+      </p>
+      <p class="career-body">求人広告・販促物等のDTP制作。紙 / Web / 動画を一貫した視点で設計・制作できます。</p>
     </div>
   </div>
 
-  <div class="section">
-    <div class="section-title">Contact</div>
+  <hr class="divider">
+
+  <div class="port-section">
+    <div class="port-label">Contact</div>
     <a class="contact-link" href="mailto:matsu.book0322@gmail.com">
+      <i class="ti ti-mail" aria-hidden="true" style="font-size:16px"></i>
       matsu.book0322@gmail.com
     </a>
   </div>
 
-  <div class="footer-line"></div>
 </div>
+
 </body>
 </html>
