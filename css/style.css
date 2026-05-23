@@ -104,7 +104,6 @@
 .notion-area {
     border: 0.5px dashed var(--color-border-secondary);
     border-radius: var(--border-radius-lg);
-    padding: 2rem;
     text-align: center;
     color: var(--color-text-tertiary);
     font-size: 13px;
@@ -112,5 +111,5 @@
     letter-spacing: 0.04em
 }
 .notion-area ifrane{
- width:100%;   
+    width:100%;
 }
