@@ -22,32 +22,18 @@
 
   <hr class="div">
 
-  <!-- Skills -->
   <div style="margin-bottom:1.75rem">
     <div class="sec-label">Skills</div>
     <div class="sk-grid">
-      <div class="sk-row">
-        <span class="sk-cat">Design</span>
-        <span class="sk-val">Illustrator &nbsp;/&nbsp; Photoshop &nbsp;/&nbsp; InDesign &nbsp;/&nbsp; XD</span>
-      </div>
-      <div class="sk-row">
-        <span class="sk-cat">Coding</span>
-        <span class="sk-val">HTML &nbsp;/&nbsp; CSS &nbsp;/&nbsp; WordPress</span>
-      </div>
-      <div class="sk-row">
-        <span class="sk-cat">Motion</span>
-        <span class="sk-val">Premiere Pro &nbsp;/&nbsp; After Effects</span>
-      </div>
-      <div class="sk-row">
-        <span class="sk-cat">Other</span>
-        <span class="sk-val">VS Code</span>
-      </div>
+      <div class="sk-row"><span class="sk-cat">Design</span><span class="sk-val">Illustrator &nbsp;/&nbsp; Photoshop &nbsp;/&nbsp; InDesign &nbsp;/&nbsp; XD</span></div>
+      <div class="sk-row"><span class="sk-cat">Coding</span><span class="sk-val">HTML &nbsp;/&nbsp; CSS &nbsp;/&nbsp; WordPress</span></div>
+      <div class="sk-row"><span class="sk-cat">Motion</span><span class="sk-val">Premiere Pro &nbsp;/&nbsp; After Effects</span></div>
+      <div class="sk-row"><span class="sk-cat">Other</span><span class="sk-val">VS Code</span></div>
     </div>
   </div>
 
   <hr class="div">
 
-  <!-- Career -->
   <div style="margin-bottom:1.75rem">
     <div class="sec-label">Career</div>
     <div class="ca-card">
@@ -66,7 +52,6 @@
 
   <hr class="div">
 
-  <!-- Portfolio -->
   <div style="margin-bottom:1.75rem">
     <div class="sec-label">Portfolio</div>
     <div class="tab-wrap">
@@ -74,25 +59,16 @@
       <button class="tab-btn" onclick="switchTab(event,'web')">Web</button>
       <button class="tab-btn" onclick="switchTab(event,'dtp')">DTP</button>
     </div>
-    <div id="tab-all" class="tab-content active">
-      <div class="works-grid" id="grid-all"></div>
-    </div>
-    <div id="tab-web" class="tab-content">
-      <div class="works-grid" id="grid-web"></div>
-    </div>
-    <div id="tab-dtp" class="tab-content">
-      <div class="works-grid" id="grid-dtp"></div>
-    </div>
+    <div id="tab-all" class="tab-content active"><div class="works-grid" id="grid-all"></div></div>
+    <div id="tab-web" class="tab-content"><div class="works-grid" id="grid-web"></div></div>
+    <div id="tab-dtp" class="tab-content"><div class="works-grid" id="grid-dtp"></div></div>
   </div>
 
   <hr class="div">
 
-  <!-- Contact -->
   <div>
     <div class="sec-label">Contact</div>
-    <a class="ct-link" href="mailto:matsu.book0322@gmail.com">
-      ✉ matsu.book0322@gmail.com
-    </a>
+    <a class="ct-link" href="mailto:matsu.book0322@gmail.com">✉ matsu.book0322@gmail.com</a>
   </div>
 
 </div>
@@ -134,7 +110,7 @@ const works = [
     tools: "Adobe Photoshop",
     role: "Design",
     url: "https://zaza-j.com/",
-    thumb: "./img/portfolio/web4.unuson-1.png",
+    thumb: "./img/portfolio/web/4.unuson-1.png",
     desc: "多店舗展開する美容院のWebサイト下層ページデザインを担当。既存のTOPデザインとの統一感を保ちながら、クライアントの細かな要望をディレクターと連携しながら丁寧に反映。デザイン性と要件整理の両立を実現。"
   },
   {
@@ -175,10 +151,8 @@ const works = [
     role: "Design",
     url: "",
     thumb: "./img/portfolio/web/5.unuson-2.png",
-    desc: "製造業のコーポレートサイト下層ページ39ページ分のデザインを担当。コンペで選ばれたTOPデザインのトーンを踏襲しつつ、複雑な情報構造を整理し、クライアントが伝えたい内容をわかりやすく届けるページ設計を意識。
-大規模案件における情報整理力とデザインの一貫性を発揮。"
-  },
-
+    desc: "製造業のコーポレートサイト下層ページ39ページ分のデザインを担当。コンペで選ばれたTOPデザインのトーンを踏襲しつつ、複雑な情報構造を整理し、クライアントが伝えたい内容をわかりやすく届けるページ設計を意識。大規模案件における情報整理力とデザインの一貫性を発揮。"
+  }
 ];
 
 function createCard(work, idx) {
@@ -218,7 +192,6 @@ function switchTab(e, name) {
 function openModal(idx) {
   const w = works[idx];
   document.getElementById('modal-title').textContent = w.title;
-
   const thumb = document.getElementById('modal-thumb');
   const placeholder = document.getElementById('modal-thumb-placeholder');
   if (w.thumb) {
@@ -229,17 +202,13 @@ function openModal(idx) {
     thumb.style.display = 'none';
     placeholder.style.display = 'flex';
   }
-
   let meta = '';
   if (w.company) meta += `<div class="modal-meta-row"><span class="modal-meta-key">会社</span><span>${w.company}</span></div>`;
   if (w.tools)   meta += `<div class="modal-meta-row"><span class="modal-meta-key">ツール</span><span>${w.tools}</span></div>`;
   document.getElementById('modal-meta').innerHTML = meta;
-
   document.getElementById('modal-badges').innerHTML =
     w.role.split('/').map(r => `<span class="badge">${r.trim()}</span>`).join('');
-
   document.getElementById('modal-desc').textContent = w.desc || '';
-
   const urlBtn = document.getElementById('modal-url');
   if (w.url) {
     urlBtn.href = w.url;
@@ -247,7 +216,6 @@ function openModal(idx) {
   } else {
     urlBtn.style.display = 'none';
   }
-
   document.getElementById('modal-overlay').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
@@ -258,7 +226,6 @@ function closeModal() {
 }
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
 renderGrids();
 </script>
 </body>
