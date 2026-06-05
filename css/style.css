@@ -109,6 +109,13 @@ body {
     margin-bottom: 5px;
     letter-spacing: 0.02em;
 }
+.employment{
+    color: var(--color-text-tertiary);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    padding-top: 1px;
+    display:inline-block;
+}
 .ca-body li{
     font-size: 0.9rem;
     color: var(--color-text-secondary);
