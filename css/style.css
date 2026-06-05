@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 :root {
     --color-text-primary: #1a1a1a;
     --color-text-secondary: #555;
@@ -22,13 +23,20 @@ body {
     background: var(--color-bg-primary);
     line-height: 1.6;
 }
+.outfit-<uniquifier> {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
 .pw {
     max-width: 800px;
-    margin: 0 auto;
+    font-family: "Outfit", sans-serif;: 0 auto;
     padding: 3rem 2rem;
 }
 .pname {
     font-size: 26px;
+    font-family: "Outfit", sans-serif;
     font-weight: 500;
     letter-spacing: 0.02em;
     margin-bottom: 4px;
