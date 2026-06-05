@@ -117,6 +117,7 @@ body {
     display:inline-block;
 }
 .ca-body li{
+    list-style-position: inside;
     font-size: 0.9rem;
     color: var(--color-text-secondary);
     line-height: 1.75;
