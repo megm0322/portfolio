@@ -108,13 +108,18 @@ body {
     font-weight: 700;
     margin-bottom: 5px;
     letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
 }
 .employment{
     color: var(--color-text-tertiary);
     font-size: 12px;
     letter-spacing: 0.06em;
     padding-top: 1px;
-    display:inline-block;
+    padding: 3px 10px;
+    max-width: 180px;
+    align-self: center;
+    margin-left: 10px;
 }
 .ca-body li{
     list-style-position: inside;
