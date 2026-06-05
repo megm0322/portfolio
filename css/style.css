@@ -33,6 +33,7 @@ body {
     max-width: 800px;
     font-family: "Outfit", sans-serif;: 0 auto;
     padding: 3rem 2rem;
+    margin: auto;
 }
 .pname {
     font-size: 26px;
@@ -68,7 +69,7 @@ body {
     margin: 1.75rem 0;
 }
 .sec-label {
-    font-size: 13px;
+    font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 0.16em;
     color: var(--color-text-tertiary);
@@ -88,7 +89,7 @@ body {
 .sk-cat {
     color: var(--color-text-tertiary);
     min-width: 64px;
-    font-size: 12px;
+    font-size: 0.9rem;
     letter-spacing: 0.06em;
     padding-top: 1px;
 }
