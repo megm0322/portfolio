@@ -94,8 +94,11 @@ body {
     padding-top: 1px;
 }
 .sk-val {
-    color: var(--color-text-primary);
-    letter-spacing: 0.02em;
+    font-size: 12px;
+    padding: 4px 14px;
+    line^height:1;
+    background: #96b4cd;
+    letter-spacing: 0.04em;
 }
 .ca-card {
     border: 0.5px solid var(--color-border);
