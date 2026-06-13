@@ -135,6 +135,9 @@ body {
     align-self: center;
     margin-left: 10px;
 }
+.ca-body:not(last-of-type){
+    margin-bottom:20px;
+}
 .ca-body dl dt{
     margin-bottom:10px;
 }
