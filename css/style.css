@@ -127,14 +127,13 @@ body {
     align-self: center;
     margin-left: 10px;
 }
-.ca-body li{
-    list-style-position: inside;
+.ca-body dt{
     font-size: 0.9rem;
     color: var(--color-text-secondary);
     line-height: 1.75;
     letter-spacing: 0.01em;
-    text-indent: -1.21em;
-    padding-left: 1em;
+    font-weight:600;
+    margin-bottom:10px;
 }
 .tab-wrap {
     display: flex;
