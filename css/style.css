@@ -149,6 +149,28 @@ body {
     font-weight:600;
     margin-bottom:5px;
 }
+link {
+  position: relative;
+}
+link::before,
+link::after {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 170px;
+  height: 1px;
+  background-color: #333;
+}
+link::before {
+  width: 80px;
+}
+link::after {
+  width: 14px;
+  transform-origin: right center;
+  transform: translate(65px, 0px) rotate(45deg);
+}
+
+
 .tab-wrap {
     display: flex;
     gap: 4px;
