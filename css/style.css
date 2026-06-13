@@ -123,7 +123,7 @@ body {
     line-height: 1;
     letter-spacing: 0.01em;
     font-weight:600;
-    margin-bottom:10px;
+    margin-bottom:15px;
 }
 .employment{
     color: var(--color-text-tertiary);
@@ -139,10 +139,10 @@ body {
     margin-bottom:20px;
 }
 .ca-body dl{
-    margin-bottom:10px;
+    margin-bottom:25px;
 }
 .ca-body dl dt{
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: #3e79a9;
     line-height: 1;
     letter-spacing: 0.01em;
