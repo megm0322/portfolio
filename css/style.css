@@ -44,7 +44,7 @@ body {
 }
 .psub {
     font-size: 14px;
-    color: var(--color-text-secondary);
+    color: #7e8b97;
     letter-spacing: 0.06em;
     margin-bottom: 1.75rem;
 }
@@ -118,7 +118,7 @@ body {
 }
 .re-title{
     font-size: 1.2rem;
-    color: var(--color-text-secondary);
+    color: #375b7a;
     line-height: 1;
     letter-spacing: 0.01em;
     font-weight:600;
@@ -139,7 +139,7 @@ body {
 }
 .ca-body:not(:last-of-type){
     margin-bottom:30px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     border-bottom: 1px dotted var(--color-border);
 }
 .ca-body dl:not(:last-of-type){
