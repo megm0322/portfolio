@@ -30,7 +30,7 @@ body {
   font-style: normal;
 }
 .pw {
-    max-width: 800px;
+    max-width: 1200px;
     font-family: "Outfit", sans-serif;: 0 auto;
     padding: 3rem 2rem;
     margin: auto;
@@ -149,11 +149,11 @@ body {
     font-weight:600;
     margin-bottom:5px;
 }
-.link {
+link {
   position: relative;
 }
-.link::before,
-.link::after {
+link::before,
+link::after {
   content: "";
   position: absolute;
   top: 23px;
@@ -161,10 +161,10 @@ body {
   height: 1px;
   background-color: #333;
 }
-.link::before {
+link::before {
   width: 80px;
 }
-.link::after {
+link::after {
   width: 14px;
   transform-origin: right center;
   transform: translate(65px, 0px) rotate(45deg);
@@ -205,7 +205,7 @@ body {
 }
 .works-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 16px;
 }
 .work-card {
