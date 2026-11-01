@@ -30,7 +30,7 @@ body {
   font-style: normal;
 }
 .pw {
-    max-width: 1200px;
+    max-width: 1000px;
     font-family: "Outfit", sans-serif;: 0 auto;
     padding: 3rem 2rem;
     margin: auto;
@@ -124,6 +124,9 @@ body {
     letter-spacing: 0.01em;
     font-weight:600;
     margin-bottom:15px;
+}
+.re-title + p{
+    margin-bottom: 10px;
 }
 .employment{
     color: var(--color-text-tertiary);
